@@ -50,7 +50,7 @@ def extractTextOneFile(file,from_dir,to_dir):
 
 def returnTextOneFile(file):
     
-    with open(file,'r') as f:
+    with open(file,'r', encoding="utf-8") as f:
         text =  f.read()
         cleaned = re.sub('HYPERLINK.+\n','\n',text)
         cleaned = re.sub('PAGEREF.+\\\\h','\n',cleaned)
